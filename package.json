@@ -1,0 +1,39 @@
+{
+    "name": "iuliia",
+    "version": "0.1.0",
+    "description": "Transliterate Cyrillic → Latin in every possible way",
+    "author": "Anton Zhiyanov <m@antonz.ru>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nalgeon/iuliia-js.git"
+    },
+    "keywords": [
+        "transliterate",
+        "transliteration",
+        "romanization",
+        "cyrillic to latin",
+        "iso 9",
+        "icao doc 9303"
+    ],
+    "devDependencies": {
+        "@types/jest": "^25.2.1",
+        "jest": "^25.4.0",
+        "prettier": "^2.0.5",
+        "ts-jest": "^25.4.0",
+        "tslint": "^6.1.1",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^3.8.3"
+    },
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist/**/*"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "lint": "tslint -p tsconfig.json",
+        "test": "jest --config jestconfig.json"
+    }
+}
