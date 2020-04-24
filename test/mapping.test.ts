@@ -7,7 +7,7 @@ const map = new Map([
 
 test("Mapping", () => {
     const mapping = new Mapping(map);
-    expect(mapping.map).toEqual(map);
+    expect(mapping.valueOf()).toEqual(map);
 });
 
 test("Mapping.get()", () => {
@@ -20,7 +20,7 @@ test("Mapping.get()", () => {
 
 test("LetterMapping", () => {
     const mapping = new LetterMapping(map);
-    expect(mapping.map).toEqual(
+    expect(mapping.valueOf()).toEqual(
         new Map([
             ["a", "x"],
             ["A", "X"],
@@ -37,7 +37,7 @@ test("PrevMapping", () => {
             ["bx", "xxx"],
         ])
     );
-    expect(mapping.map).toEqual(
+    expect(mapping.valueOf()).toEqual(
         new Map([
             ["ax", "xx"],
             ["Ax", "xx"],
@@ -56,7 +56,7 @@ test("NextMapping", () => {
             ["xb", "xxx"],
         ])
     );
-    expect(mapping.map).toEqual(
+    expect(mapping.valueOf()).toEqual(
         new Map([
             ["xa", "xx"],
             ["Xa", "Xx"],
@@ -75,7 +75,7 @@ test("EndingMapping", () => {
             ["bb", "yy"],
         ])
     );
-    expect(mapping.map).toEqual(
+    expect(mapping.valueOf()).toEqual(
         new Map([
             ["aa", "xx"],
             ["AA", "XX"],

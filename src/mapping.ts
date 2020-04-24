@@ -31,16 +31,20 @@ function capitalize(s: string): string {
 
 /** Letter map for transliteration schema. */
 export class Mapping {
-    map: Map<string, string>;
+    protected map: Map<string, string>;
 
     constructor(mapping: Map<string, string>) {
         this.map = new Map(mapping);
     }
 
+    public valueOf(): Map<string, string> {
+        return this.map;
+    }
+
     /**
      * Return mapped value for `key` if key is in the map, else `defaultValue`.
      */
-    get(key: string, defaultValue?: any): any {
+    public get(key: string, defaultValue?: any): any {
         const value = this.map.get(key);
         return value !== undefined ? value : defaultValue;
     }
