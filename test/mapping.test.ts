@@ -5,12 +5,12 @@ const map = new Map([
     ["b", "yy"],
 ]);
 
-test("Mapping", () => {
+test("mapping value", () => {
     const mapping = new Mapping(map);
     expect(mapping.valueOf()).toEqual(map);
 });
 
-test("Mapping.get()", () => {
+test("get mapped letter", () => {
     const mapping = new Mapping(map);
     expect(mapping.get("a")).toEqual("x");
     expect(mapping.get("b")).toEqual("yy");
@@ -18,7 +18,7 @@ test("Mapping.get()", () => {
     expect(mapping.get("c", "d")).toEqual("d");
 });
 
-test("LetterMapping", () => {
+test("mapping for individual letter", () => {
     const mapping = new LetterMapping(map);
     expect(mapping.valueOf()).toEqual(
         new Map([
@@ -30,7 +30,7 @@ test("LetterMapping", () => {
     );
 });
 
-test("PrevMapping", () => {
+test("mapping with respect to prev letter", () => {
     const mapping = new PrevMapping(
         new Map([
             ["ax", "xx"],
@@ -49,7 +49,7 @@ test("PrevMapping", () => {
     );
 });
 
-test("NextMapping", () => {
+test("mapping with respect to next letter", () => {
     const mapping = new NextMapping(
         new Map([
             ["xa", "xx"],
@@ -68,7 +68,7 @@ test("NextMapping", () => {
     );
 });
 
-test("EndingMapping", () => {
+test("mapping for word ending", () => {
     const mapping = new EndingMapping(
         new Map([
             ["aa", "xx"],

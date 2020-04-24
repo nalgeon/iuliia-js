@@ -1,12 +1,12 @@
 import { translate } from "../src/engine";
 import { Schema } from "../src/schema";
 
-test("translate", () => {
+test("translate without schema", () => {
     const schema = new Schema(new Map());
     expect(translate("Iuliia", schema)).toBe("Iuliia");
 });
 
-test("mapping", () => {
+test("translate according to schema", () => {
     const schema = new Schema(
         new Map([
             ["a", "1"],
@@ -18,27 +18,27 @@ test("mapping", () => {
     expect(translate("Iuliia", schema)).toBe("243221");
 });
 
-test("prev_mapping", () => {
+test("translate with respect to prev letter", () => {
     const schema = new Schema(new Map(), new Map([["li", ""]]));
     expect(translate("Iuliia", schema)).toBe("Iulia");
 });
 
-test("next_mapping", () => {
+test("translate with respect to next letter", () => {
     const schema = new Schema(new Map(), new Map(), new Map([["iu", "y"]]));
     expect(translate("Iuliia", schema)).toBe("Yuliia");
 });
 
-test("ending_mapping", () => {
+test("translate word ending", () => {
     const schema = new Schema(new Map(), new Map(), new Map(), new Map([["ia", "ya"]]));
     expect(translate("Iuliia", schema)).toBe("Iuliya");
 });
 
-test("short_word", () => {
+test("translate short word", () => {
     const schema = new Schema(new Map());
     expect(translate("Iu", schema)).toBe("Iu");
 });
 
-test("empty_word", () => {
+test("translate empty word", () => {
     const schema = new Schema(new Map());
     expect(translate("", schema)).toBe("");
 });

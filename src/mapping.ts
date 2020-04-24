@@ -2,7 +2,7 @@
  * Transliteration mappings.
  */
 
-const BASE_MAPPING = new Map([
+export const BASE_MAPPING = new Map([
     ["а", "a"],
     ["б", "b"],
     ["в", "v"],
@@ -23,11 +23,6 @@ const BASE_MAPPING = new Map([
     ["у", "u"],
     ["ф", "f"],
 ]);
-
-/** Capitalize string */
-function capitalize(s: string): string {
-    return s.charAt(0).toUpperCase() + s.slice(1);
-}
 
 /** Letter map for transliteration schema. */
 export class Mapping {
@@ -104,4 +99,9 @@ export class EndingMapping extends Mapping {
         }
         this.map = new Map([...this.map, ...upperMap]);
     }
+}
+
+/** Capitalize string */
+function capitalize(s: string): string {
+    return s.charAt(0).toUpperCase() + s.slice(1);
 }
