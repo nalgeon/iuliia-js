@@ -1,5 +1,5 @@
 /**
- * Transate engine.
+ * Translate engine.
  */
 
 import { Schema } from "./schema";
