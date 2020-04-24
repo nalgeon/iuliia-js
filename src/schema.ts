@@ -27,20 +27,16 @@ export class Schema {
      * `prev` and `next` are taken into consideration according to corresponding mappings.
      * @param prev previous letter
      * @param curr current letter
-     * @param next the next letter
+     * @param next next letter
      */
     public translateLetter(prev: string, curr: string, next: string) {
         let letter = this.prevMap.get(prev + curr);
-        // console.log("prev get " + (prev + curr) + " = " + letter);
         if (letter === undefined) {
             letter = this.nextMap.get(curr + next);
-            // console.log("next get " + (curr + next) + " = " + letter);
         }
         if (letter === undefined) {
             letter = this.map.get(curr, curr);
-            // console.log("letter get " + curr + " = " + letter);
         }
-        // console.log("return " + letter);
         return letter;
     }
 
