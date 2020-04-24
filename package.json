@@ -1,6 +1,6 @@
 {
     "name": "iuliia",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "description": "Transliterate Cyrillic → Latin in every possible way",
     "author": "Anton Zhiyanov <m@antonz.ru>",
     "license": "MIT",
