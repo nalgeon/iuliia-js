@@ -5,10 +5,10 @@ import { LetterMapping, PrevMapping, NextMapping, EndingMapping } from "./mappin
 
 /** Transliteration schema. Defines the way to translate individual letters. */
 export class Schema {
-    map: LetterMapping;
-    prevMap: PrevMapping;
-    nextMap: NextMapping;
-    endingMap: EndingMapping;
+    private map: LetterMapping;
+    private prevMap: PrevMapping;
+    private nextMap: NextMapping;
+    private endingMap: EndingMapping;
 
     constructor(
         mapping: Map<string, string>,
@@ -29,7 +29,7 @@ export class Schema {
      * @param curr current letter
      * @param next the next letter
      */
-    translateLetter(prev: string, curr: string, next: string) {
+    public translateLetter(prev: string, curr: string, next: string) {
         let letter = this.prevMap.get(prev + curr);
         // console.log("prev get " + (prev + curr) + " = " + letter);
         if (letter === undefined) {
@@ -45,7 +45,7 @@ export class Schema {
     }
 
     /** Translate word ending according to schema mapping. */
-    translateEnding(ending: string) {
+    public translateEnding(ending: string) {
         return this.endingMap.get(ending);
     }
 }
