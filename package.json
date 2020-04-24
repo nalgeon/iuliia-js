@@ -28,8 +28,8 @@
         "tslint-config-prettier": "^1.18.0",
         "typescript": "^3.8.3"
     },
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "dist/node/index.js",
+    "types": "dist/node/index.d.ts",
     "files": [
         "dist/**/*"
     ],
