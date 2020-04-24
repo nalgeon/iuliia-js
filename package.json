@@ -21,6 +21,8 @@
         "coveralls": "^3.0.14",
         "jest": "^25.4.0",
         "prettier": "^2.0.5",
+        "rollup": "^2.7.2",
+        "terser": "^4.6.12",
         "ts-jest": "^25.4.0",
         "tslint": "^6.1.1",
         "tslint-config-prettier": "^1.18.0",
@@ -32,10 +34,16 @@
         "dist/**/*"
     ],
     "scripts": {
-        "build": "tsc",
+        "clean": "rm -rf dist",
+        "compile:node": "tsc",
+        "compile:browser": "tsc -p tsconfig.browser.json",
         "coveralls": "cat ./coverage/lcov.info | coveralls",
         "format": "prettier --write \"src/**/*.ts\"",
         "lint": "tslint -p tsconfig.json",
-        "test": "jest --coverage --config jestconfig.json"
+        "test": "jest --coverage --config jestconfig.json",
+        "build": "npm run clean && npm run compile:node && npm run compile:browser && npm run bundle:umd && npm run bundle:umd:min && npm run build:stats",
+        "build:stats": "cd dist/umd && ls -lh *.js | awk '{print $5,$9}'",
+        "bundle:umd": "rollup dist/browser/index.js --file dist/umd/iuliia.js --format umd --name iuliia",
+        "bundle:umd:min": "terser --ecma 6 --compress --mangle -o dist/umd/iuliia.min.js -- dist/umd/iuliia.js"
     }
 }
