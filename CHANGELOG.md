@@ -1,3 +1,9 @@
+# [0.4.0](https://github.com/nalgeon/iuliia-js/compare/v0.3.0...v0.4.0) (2020-04-24)
+
+### Features
+
+-   bundle for the browser ([d4f0386](https://github.com/nalgeon/iuliia-js/commit/d4f038655d0844ae3ddcb200d396f8198d4eaa8e))
+
 # [0.3.0](https://github.com/nalgeon/iuliia-js/compare/v0.2.0...v0.3.0) (2020-04-24)
 
 ### Features
