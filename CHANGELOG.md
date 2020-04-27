@@ -1,3 +1,9 @@
+# [0.5.0](https://github.com/nalgeon/iuliia-js/compare/v0.4.1...v0.5.0) (2020-04-27)
+
+### Features
+
+-   Declarative schema definition ([479d6b2](https://github.com/nalgeon/iuliia-js/commit/479d6b23d8cd0701c5b0540d9db4a45d2d62ff23))
+
 # [0.4.0](https://github.com/nalgeon/iuliia-js/compare/v0.3.0...v0.4.0) (2020-04-24)
 
 ### Features
