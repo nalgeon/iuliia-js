@@ -3,7 +3,7 @@
  */
 
 import { Schema } from "./schema";
-import DEFINITIONS from "./schemas/_definitions";
+import DEFINITIONS from "./generated/_definitions";
 
 /**
  * All supported transliteration schemas.
