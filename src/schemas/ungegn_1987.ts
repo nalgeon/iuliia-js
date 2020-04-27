@@ -1,7 +1,7 @@
 export default {
-    name: "scientific",
-    description: "Scientific transliteration schema",
-    url: "https://dangry.ru/iuliia/scientific/",
+    name: "ungegn_1987",
+    description: "UNGEGN 1987 V/18 transliteration schema",
+    url: "https://dangry.ru/iuliia/ungegn-1987/",
     mapping: {
         а: "a",
         б: "b",
@@ -25,7 +25,7 @@ export default {
         т: "t",
         у: "u",
         ф: "f",
-        х: "x",
+        х: "h",
         ц: "c",
         ч: "č",
         ш: "š",
@@ -43,7 +43,11 @@ export default {
     samples: [
         [
             "Юлия, съешь ещё этих мягких французских булок из Йошкар-Олы, да выпей алтайского чаю",
-            "Julija, sʺešʹ eščё ètix mjagkix francuzskix bulok iz Joškar-Oly, da vypej altajskogo čaju",
+            "Julija, sʺešʹ eščё ètih mjagkih francuzskih bulok iz Joškar-Oly, da vypej altajskogo čaju",
+        ],
+        [
+            "Россия, город Йошкар-Ола, улица Яна Крастыня",
+            "Rossija, gorod Joškar-Ola, ulica Jana Krastynja",
         ],
     ],
 };

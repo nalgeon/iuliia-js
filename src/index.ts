@@ -1,54 +1,35 @@
 import { translate } from "./engine";
 import { Schema } from "./schema";
-import { Schemas } from "./schemas/schemas";
-import { ALA_LC, ALA_LC_ALT } from "./schemas/ala-lc";
-import { BGN_PCGN, BGN_PCGN_ALT } from "./schemas/bgn-pcgn";
-import { BS_2979, BS_2979_ALT } from "./schemas/bs-2979";
-import { GOST_779, GOST_779_ALT } from "./schemas/gost-779";
-import { GOST_7034 } from "./schemas/gost-7034";
-import { GOST_16876, GOST_16876_ALT } from "./schemas/gost-16876";
-import { GOST_52290 } from "./schemas/gost-52290";
-import { GOST_52535 } from "./schemas/gost-52535";
-import { ICAO_DOC_9303 } from "./schemas/icao-doc-9303";
-import { ISO_9_1954 } from "./schemas/iso-9-1954";
-import { ISO_9_1968, ISO_9_1968_ALT } from "./schemas/iso-9-1968";
-import { MVD_310, MVD_310_FR } from "./schemas/mvd-310";
-import { MVD_782 } from "./schemas/mvd-782";
-import { SCIENTIFIC } from "./schemas/scientific";
-import { TELEGRAM } from "./schemas/telegram";
-import { UNGEGN_1987 } from "./schemas/ungegn-1987";
-import { WIKIPEDIA } from "./schemas/wikipedia";
-import { YANDEX_MAPS } from "./schemas/yandex-maps";
-import { YANDEX_MONEY } from "./schemas/yandex-money";
+import { Schemas } from "./schemas";
 
 export default {
     translate,
     Schema,
     Schemas,
-    ALA_LC,
-    ALA_LC_ALT,
-    BGN_PCGN,
-    BGN_PCGN_ALT,
-    BS_2979,
-    BS_2979_ALT,
-    GOST_16876,
-    GOST_16876_ALT,
-    GOST_52290,
-    GOST_52535,
-    GOST_7034,
-    GOST_779,
-    GOST_779_ALT,
-    ICAO_DOC_9303,
-    ISO_9_1954,
-    ISO_9_1968,
-    ISO_9_1968_ALT,
-    MVD_310,
-    MVD_310_FR,
-    MVD_782,
-    SCIENTIFIC,
-    TELEGRAM,
-    UNGEGN_1987,
-    WIKIPEDIA,
-    YANDEX_MAPS,
-    YANDEX_MONEY,
+    ALA_LC: Schemas.get("ala_lc"),
+    ALA_LC_ALT: Schemas.get("ala_lc_alt"),
+    BGN_PCGN: Schemas.get("bgn_pcgn"),
+    BGN_PCGN_ALT: Schemas.get("bgn_pcgn_alt"),
+    BS_2979: Schemas.get("bs_2979"),
+    BS_2979_ALT: Schemas.get("bs_2979_alt"),
+    GOST_16876: Schemas.get("gost_16876"),
+    GOST_16876_ALT: Schemas.get("gost_16876_alt"),
+    GOST_52290: Schemas.get("gost_52290"),
+    GOST_52535: Schemas.get("gost_52535"),
+    GOST_7034: Schemas.get("gost_7034"),
+    GOST_779: Schemas.get("gost_779"),
+    GOST_779_ALT: Schemas.get("gost_779_alt"),
+    ICAO_DOC_9303: Schemas.get("icao_doc_9303"),
+    ISO_9_1954: Schemas.get("iso_9_1954"),
+    ISO_9_1968: Schemas.get("iso_9_1968"),
+    ISO_9_1968_ALT: Schemas.get("iso_9_1968_alt"),
+    MVD_310: Schemas.get("mvd_310"),
+    MVD_310_FR: Schemas.get("mvd_310_fr"),
+    MVD_782: Schemas.get("mvd_782"),
+    SCIENTIFIC: Schemas.get("scientific"),
+    TELEGRAM: Schemas.get("telegram"),
+    UNGEGN_1987: Schemas.get("ungegn_1987"),
+    WIKIPEDIA: Schemas.get("wikipedia"),
+    YANDEX_MAPS: Schemas.get("yandex_maps"),
+    YANDEX_MONEY: Schemas.get("yandex_money"),
 };

@@ -5,21 +5,28 @@ import { LetterMapping, PrevMapping, NextMapping, EndingMapping } from "./mappin
 
 /** Transliteration schema. Defines the way to translate individual letters. */
 export class Schema {
+    public name: string;
+    public samples: string[][];
+
     private map: LetterMapping;
     private prevMap: PrevMapping;
     private nextMap: NextMapping;
     private endingMap: EndingMapping;
 
     constructor(
+        name: string,
         mapping: Map<string, string>,
         prevMapping?: Map<string, string>,
         nextMapping?: Map<string, string>,
-        endingMapping?: Map<string, string>
+        endingMapping?: Map<string, string>,
+        samples?: string[][]
     ) {
+        this.name = name;
         this.map = new LetterMapping(mapping);
         this.prevMap = new PrevMapping(prevMapping || new Map());
         this.nextMap = new NextMapping(nextMapping || new Map());
         this.endingMap = new EndingMapping(endingMapping || new Map());
+        this.samples = samples || [];
     }
 
     /**
@@ -43,5 +50,16 @@ export class Schema {
     /** Translate word ending according to schema mapping. */
     public translateEnding(ending: string) {
         return this.endingMap.get(ending);
+    }
+
+    public static load(definition: any) {
+        return new Schema(
+            definition.name,
+            new Map<string, string>(Object.entries(definition.mapping)),
+            new Map<string, string>(Object.entries(definition.prev_mapping || {})),
+            new Map<string, string>(Object.entries(definition.next_mapping || {})),
+            new Map<string, string>(Object.entries(definition.ending_mapping || {})),
+            definition.samples
+        );
     }
 }

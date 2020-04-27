@@ -1,4 +1,4 @@
-import iuliia from "../../src/index";
+import iuliia from "../src/index";
 
 test("schema names", () => {
     const names = iuliia.Schemas.names();
@@ -37,11 +37,6 @@ test("get schema by name", () => {
     expect(schema).toEqual(iuliia.WIKIPEDIA);
 });
 
-test("get schema by alias", () => {
-    const schema = iuliia.Schemas.get("iso_9");
-    expect(schema).toEqual(iuliia.GOST_779);
-});
-
 test("schema not found", () => {
     expect(() => {
         iuliia.Schemas.get("whatever");
@@ -52,4 +47,22 @@ test("translate", () => {
     const schema = iuliia.Schemas.get("wikipedia");
     const translated = iuliia.translate("Юлия", schema);
     expect(translated).toBe("Yuliya");
+});
+
+function samples(): Array<[string, number, string, string]> {
+    const samples: Array<[string, number, string, string]> = [];
+    for (let schema of iuliia.Schemas.values()) {
+        let idx = 1;
+        for (let sample of schema.samples) {
+            const source = sample[0];
+            const expected = sample[1];
+            samples.push([schema.name, idx++, source, expected]);
+        }
+    }
+    return samples;
+}
+
+test.each(samples())("%s %d: %s", (name, idx, source, expected) => {
+    const schema = iuliia.Schemas.get(name);
+    expect(iuliia.translate(source, schema)).toBe(expected);
 });

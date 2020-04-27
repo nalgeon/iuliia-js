@@ -1,62 +1,95 @@
-/**
- * Wikipedia transliteration schema.
- * https://dangry.ru/iuliia/wikipedia/
- */
-
-import { BASE_MAPPING } from "../mapping";
-import { Schema } from "../schema";
-
-const MAPPING = new Map<string, string>([
-    ...BASE_MAPPING,
-    ...new Map([
-        ["ё", "yo"],
-        ["ж", "zh"],
-        ["й", "y"],
-        ["х", "kh"],
-        ["ц", "ts"],
-        ["ч", "ch"],
-        ["ш", "sh"],
-        ["щ", "shch"],
-        ["ъ", ""],
-        ["ы", "y"],
-        ["ь", ""],
-        ["э", "e"],
-        ["ю", "yu"],
-        ["я", "ya"],
-    ]),
-]);
-
-const PREV_MAPPING = new Map<string, string>([
-    ["е", "ye"],
-    ["ае", "ye"],
-    ["ие", "ye"],
-    ["ое", "ye"],
-    ["уе", "ye"],
-    ["эе", "ye"],
-    ["юе", "ye"],
-    ["яе", "ye"],
-    ["ье", "ye"],
-    ["ъе", "ye"],
-]);
-
-const NEXT_MAPPING = new Map<string, string>([
-    ["ъа", "y"],
-    ["ъи", "y"],
-    ["ъо", "y"],
-    ["ъу", "y"],
-    ["ъы", "y"],
-    ["ъэ", "y"],
-    ["ьа", "y"],
-    ["ьи", "y"],
-    ["ьо", "y"],
-    ["ьу", "y"],
-    ["ьы", "y"],
-    ["ьэ", "y"],
-]);
-
-const ENDING_MAPPING = new Map<string, string>([
-    ["ий", "y"],
-    ["ый", "y"],
-]);
-
-export const WIKIPEDIA = new Schema(MAPPING, PREV_MAPPING, NEXT_MAPPING, ENDING_MAPPING);
+export default {
+    name: "wikipedia",
+    description: "Wikipedia transliteration schema",
+    url: "https://dangry.ru/iuliia/wikipedia/",
+    mapping: {
+        а: "a",
+        б: "b",
+        в: "v",
+        г: "g",
+        д: "d",
+        е: "e",
+        ё: "yo",
+        ж: "zh",
+        з: "z",
+        и: "i",
+        й: "y",
+        к: "k",
+        л: "l",
+        м: "m",
+        н: "n",
+        о: "o",
+        п: "p",
+        р: "r",
+        с: "s",
+        т: "t",
+        у: "u",
+        ф: "f",
+        х: "kh",
+        ц: "ts",
+        ч: "ch",
+        ш: "sh",
+        щ: "shch",
+        ъ: "",
+        ы: "y",
+        ь: "",
+        э: "e",
+        ю: "yu",
+        я: "ya",
+    },
+    prev_mapping: {
+        е: "ye",
+        ае: "ye",
+        ие: "ye",
+        ое: "ye",
+        уе: "ye",
+        эе: "ye",
+        юе: "ye",
+        яе: "ye",
+        ье: "ye",
+        ъе: "ye",
+    },
+    next_mapping: {
+        ъа: "y",
+        ъи: "y",
+        ъо: "y",
+        ъу: "y",
+        ъы: "y",
+        ъэ: "y",
+        ьа: "y",
+        ьи: "y",
+        ьо: "y",
+        ьу: "y",
+        ьы: "y",
+        ьэ: "y",
+    },
+    ending_mapping: {
+        ий: "y",
+        ый: "y",
+    },
+    samples: [
+        [
+            "Юлия, съешь ещё этих мягких французских булок из Йошкар-Олы, да выпей алтайского чаю",
+            "Yuliya, syesh yeshchyo etikh myagkikh frantsuzskikh bulok iz Yoshkar-Oly, da vypey altayskogo chayu",
+        ],
+        [
+            "Россия, город Йошкар-Ола, улица Яна Крастыня",
+            "Rossiya, gorod Yoshkar-Ola, ulitsa Yana Krastynya",
+        ],
+        ["Ельцин", "Yeltsin"],
+        ["Раздольное", "Razdolnoye"],
+        ["Юрьев", "Yuryev"],
+        ["Белкин", "Belkin"],
+        ["Бийск", "Biysk"],
+        ["Подъярский", "Podyarsky"],
+        ["Мусийкъонгийкоте", "Musiykyongiykote"],
+        ["Давыдов", "Davydov"],
+        ["Усолье", "Usolye"],
+        ["Выхухоль", "Vykhukhol"],
+        ["Дальнегорск", "Dalnegorsk"],
+        ["Ильинский", "Ilyinsky"],
+        ["Красный", "Krasny"],
+        ["Великий", "Veliky"],
+        ["Набережные Челны", "Naberezhnye Chelny"],
+    ],
+};

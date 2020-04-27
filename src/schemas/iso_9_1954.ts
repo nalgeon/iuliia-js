@@ -1,7 +1,7 @@
 export default {
-    name: "scientific",
-    description: "Scientific transliteration schema",
-    url: "https://dangry.ru/iuliia/scientific/",
+    name: "iso_9_1954",
+    description: "ISO/R 9:1954 transliteration schema",
+    url: "https://dangry.ru/iuliia/iso-9-1954/",
     mapping: {
         а: "a",
         б: "b",
@@ -9,7 +9,7 @@ export default {
         г: "g",
         д: "d",
         е: "e",
-        ё: "ё",
+        ё: "ë",
         ж: "ž",
         з: "z",
         и: "i",
@@ -25,15 +25,15 @@ export default {
         т: "t",
         у: "u",
         ф: "f",
-        х: "x",
+        х: "h",
         ц: "c",
         ч: "č",
         ш: "š",
         щ: "šč",
-        ъ: "ʺ",
+        ъ: '"',
         ы: "y",
         ь: "ʹ",
-        э: "è",
+        э: "ė",
         ю: "ju",
         я: "ja",
     },
@@ -43,7 +43,7 @@ export default {
     samples: [
         [
             "Юлия, съешь ещё этих мягких французских булок из Йошкар-Олы, да выпей алтайского чаю",
-            "Julija, sʺešʹ eščё ètix mjagkix francuzskix bulok iz Joškar-Oly, da vypej altajskogo čaju",
+            'Julija, s"ešʹ eščë ėtih mjagkih francuzskih bulok iz Joškar-Oly, da vypej altajskogo čaju',
         ],
     ],
 };

@@ -1,7 +1,8 @@
 export default {
-    name: "scientific",
-    description: "Scientific transliteration schema",
-    url: "https://dangry.ru/iuliia/scientific/",
+    name: "gost_779",
+    aliases: ["iso_9_1995"],
+    description: "GOST 7.79-2000 (aka ISO 9:1995) transliteration schema",
+    url: "https://dangry.ru/iuliia/gost-779/",
     mapping: {
         а: "a",
         б: "b",
@@ -25,17 +26,17 @@ export default {
         т: "t",
         у: "u",
         ф: "f",
-        х: "x",
+        х: "h",
         ц: "c",
         ч: "č",
         ш: "š",
-        щ: "šč",
+        щ: "ŝ",
         ъ: "ʺ",
         ы: "y",
         ь: "ʹ",
         э: "è",
-        ю: "ju",
-        я: "ja",
+        ю: "û",
+        я: "â",
     },
     prev_mapping: null,
     next_mapping: null,
@@ -43,7 +44,7 @@ export default {
     samples: [
         [
             "Юлия, съешь ещё этих мягких французских булок из Йошкар-Олы, да выпей алтайского чаю",
-            "Julija, sʺešʹ eščё ètix mjagkix francuzskix bulok iz Joškar-Oly, da vypej altajskogo čaju",
+            "Ûliâ, sʺešʹ eŝё ètih mâgkih francuzskih bulok iz Joškar-Oly, da vypej altajskogo čaû",
         ],
     ],
 };
