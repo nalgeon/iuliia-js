@@ -1,3 +1,9 @@
+# [0.6.0](https://github.com/nalgeon/iuliia-js/compare/v0.5.0...v0.6.0) (2020-04-29)
+
+### Features
+
+-   Moscow Metro map schema ([b63d982](https://github.com/nalgeon/iuliia-js/commit/b63d98223e002bdd28300e163e08f1af504f104d))
+
 # [0.5.0](https://github.com/nalgeon/iuliia-js/compare/v0.4.1...v0.5.0) (2020-04-27)
 
 ### Features
