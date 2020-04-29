@@ -20,6 +20,7 @@ test("schema names", () => {
         "iso_9_1954",
         "iso_9_1968",
         "iso_9_1968_alt",
+        "mosmetro",
         "mvd_310",
         "mvd_310_fr",
         "mvd_782",

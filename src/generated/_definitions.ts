@@ -15,6 +15,7 @@ import icao_doc_9303 from "./icao_doc_9303";
 import iso_9_1954 from "./iso_9_1954";
 import iso_9_1968 from "./iso_9_1968";
 import iso_9_1968_alt from "./iso_9_1968_alt";
+import mosmetro from "./mosmetro";
 import mvd_310 from "./mvd_310";
 import mvd_310_fr from "./mvd_310_fr";
 import mvd_782 from "./mvd_782";
@@ -43,6 +44,7 @@ export default [
     iso_9_1954,
     iso_9_1968,
     iso_9_1968_alt,
+    mosmetro,
     mvd_310,
     mvd_310_fr,
     mvd_782,

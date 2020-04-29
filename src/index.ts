@@ -23,6 +23,7 @@ export default {
     ISO_9_1954: Schemas.get("iso_9_1954"),
     ISO_9_1968: Schemas.get("iso_9_1968"),
     ISO_9_1968_ALT: Schemas.get("iso_9_1968_alt"),
+    MOSMETRO: Schemas.get("mosmetro"),
     MVD_310: Schemas.get("mvd_310"),
     MVD_310_FR: Schemas.get("mvd_310_fr"),
     MVD_782: Schemas.get("mvd_782"),

@@ -19,7 +19,7 @@ Transliteration means representing Cyrillic data (mainly names and geographic lo
 
 ## Why use `Iuliia`
 
--   19 transliteration schemas (rule sets), including all main international and Russian standards.
+-   20 transliteration schemas (rule sets), including all main international and Russian standards.
 -   Correctly implements not only the base mapping, but all the special rules for letter combinations and word endings (AFAIK, Iuliia is the only library which does so).
 -   Simple API and zero third-party dependencies.
 
@@ -33,6 +33,7 @@ Supports actual schemas:
 -   ICAO DOC 9303 (`iuliia.ICAO_DOC_9303`)
 -   ISO 9:1995 aka GOST 7.79-2000 (`iuliia.GOST_779` and `iuliia.GOST_779_ALT`)
 -   UNGEGN 1987 V/18 (`iuliia.UNGEGN_1987`)
+-   Moscow Metro map (`iuliia.MOSMETRO`)
 -   Scientific (`iuliia.SCIENTIFIC`)
 -   Telegram (`iuliia.TELEGRAM`)
 -   Wikipedia (`iuliia.WIKIPEDIA`)
