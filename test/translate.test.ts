@@ -1,4 +1,4 @@
-import { translate } from "../src/engine";
+import { translate, splitSentence } from "../src/engine";
 import { Schema } from "../src/schema";
 
 test("translate without schema", () => {
@@ -42,4 +42,20 @@ test("translate short word", () => {
 test("translate empty word", () => {
     const schema = new Schema("test", new Map());
     expect(translate("", schema)).toBe("");
+});
+
+test("split sentence", () => {
+    expect(splitSentence("Hello, mankind!")).toEqual(["Hello", ",", " ", "mankind", "!"]);
+    expect(splitSentence("Привет, (привет), человечество!")).toEqual([
+        "Привет",
+        ",",
+        " ",
+        "(",
+        "привет",
+        ")",
+        ",",
+        " ",
+        "человечество",
+        "!",
+    ]);
 });

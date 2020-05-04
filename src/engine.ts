@@ -4,14 +4,22 @@
 
 import { Schema } from "./schema";
 
+// JS lacks unicode support for word boundary (\b),
+// so we have to emulate it
+const SPLITTER = /(?<=[\s,.:;?!()"'])|(?=[\s,.:;?!()"'])/;
+
 /**
  * Translate source Cyrillic string into Latin using specified schema.
  * Translates sentences word by word, delegating specifics of transliteration
  * to specified schema.
  */
 export function translate(source: string, schema: Schema) {
-    const translated = source.split(" ").map((word) => translateWord(word, schema));
-    return translated.join(" ");
+    const translated = splitSentence(source).map((word) => translateWord(word, schema));
+    return translated.join("");
+}
+
+export function splitSentence(source: string) {
+    return source.split(SPLITTER);
 }
 
 function translateWord(word: string, schema: Schema) {
