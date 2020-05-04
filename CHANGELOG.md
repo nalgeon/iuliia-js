@@ -1,3 +1,9 @@
+## [0.6.1](https://github.com/nalgeon/iuliia-js/compare/v0.6.0...v0.6.1) (2020-05-04)
+
+### Bug Fixes
+
+-   Split sentence by word boundary ([b7ba64c](https://github.com/nalgeon/iuliia-js/commit/b7ba64cc37faa7942a21cc2fef6bea705786c2ca))
+
 # [0.6.0](https://github.com/nalgeon/iuliia-js/compare/v0.5.0...v0.6.0) (2020-04-29)
 
 ### Features
