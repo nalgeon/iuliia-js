@@ -6,7 +6,7 @@ import { Schema } from "./schema";
 
 // JS lacks unicode support for word boundary (\b),
 // so we have to emulate it
-const SPLITTER = /(?<=[\s,.:;?!()"'])|(?=[\s,.:;?!()"'])/;
+const SPLITTER = /([^\s,.:;?!()"']+)|([\s,.:;?!()"'])+/g;
 
 /**
  * Translate source Cyrillic string into Latin using specified schema.
@@ -19,7 +19,7 @@ export function translate(source: string, schema: Schema) {
 }
 
 export function splitSentence(source: string) {
-    return source.split(SPLITTER);
+    return [...source.matchAll(/.+/g)].map(y=>y[0])
 }
 
 function translateWord(word: string, schema: Schema) {
