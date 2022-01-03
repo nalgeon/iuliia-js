@@ -1,3 +1,9 @@
+## [0.6.2](https://github.com/nalgeon/iuliia-js/compare/v0.6.1...v0.6.2) (2022-01-03)
+
+### Bug Fixes
+
+-   Do not use lookbehinds ([96cc00a](https://github.com/nalgeon/iuliia-js/commit/96cc00a403247d64faef2cde6c1200ca039545a2))
+
 ## [0.6.1](https://github.com/nalgeon/iuliia-js/compare/v0.6.0...v0.6.1) (2020-05-04)
 
 ### Bug Fixes

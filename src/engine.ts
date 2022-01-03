@@ -19,7 +19,7 @@ export function translate(source: string, schema: Schema) {
 }
 
 export function splitSentence(source: string) {
-    return [...source.matchAll(SPLITTER)].map(y=>y[0])
+    return [...source.matchAll(SPLITTER)].map((y) => y[0]);
 }
 
 function translateWord(word: string, schema: Schema) {
