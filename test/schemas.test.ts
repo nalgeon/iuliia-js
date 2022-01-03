@@ -50,6 +50,13 @@ test("translate", () => {
     expect(translated).toBe("Yuliya");
 });
 
+test("translate", () => {
+    const schema = iuliia.Schemas.get("wikipedia");
+    const translated = iuliia.translate("Привет, (привет), человечество!", schema);
+    expect(translated).toBe("Privet, (privet), chelovechestvo!");
+});
+
+
 function samples(): Array<[string, number, string, string]> {
     const samples: Array<[string, number, string, string]> = [];
     for (let schema of iuliia.Schemas.values()) {

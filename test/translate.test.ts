@@ -45,16 +45,12 @@ test("translate empty word", () => {
 });
 
 test("split sentence", () => {
-    expect(splitSentence("Hello, mankind!")).toEqual(["Hello", ",", " ", "mankind", "!"]);
+    expect(splitSentence("Hello, mankind!")).toEqual(["Hello", ", ", "mankind", "!"]);
     expect(splitSentence("Привет, (привет), человечество!")).toEqual([
         "Привет",
-        ",",
-        " ",
-        "(",
+        ", (",
         "привет",
-        ")",
-        ",",
-        " ",
+        "), ",
         "человечество",
         "!",
     ]);
