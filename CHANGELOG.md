@@ -1,3 +1,9 @@
+## [0.7.0](https://github.com/nalgeon/iuliia-js/compare/v0.6.2...v0.7.0) (2022-01-07)
+
+### Features
+
+-   Modular `mosmetro` and `yandex_money` schemas ([c19be1a](https://github.com/nalgeon/iuliia-js/commit/c19be1a03e4bea8ad6f6208e07b157524c2abf9d))
+
 ## [0.6.2](https://github.com/nalgeon/iuliia-js/compare/v0.6.1...v0.6.2) (2022-01-03)
 
 ### Bug Fixes

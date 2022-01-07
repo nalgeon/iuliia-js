@@ -1,6 +1,6 @@
 {
     "name": "iuliia",
-    "version": "0.6.2",
+    "version": "0.7.0",
     "description": "Transliterate Cyrillic → Latin in every possible way",
     "author": "Anton Zhiyanov <m@antonz.ru>",
     "license": "MIT",
@@ -31,11 +31,17 @@
     "main": "dist/node/index.js",
     "types": "dist/node/index.d.ts",
     "typesVersions": {
-      "*": {
-        "translate": ["dist/node/translate/index.d.ts"],
-        "schemas/MOSMETRO": ["dist/node/schemas/mosmetro.d.ts"],
-        "schemas/YANDEX_MONEY": ["dist/node/schemas/yandex_money.d.ts"]
-      }
+        "*": {
+            "translate": [
+                "dist/node/translate/index.d.ts"
+            ],
+            "schemas/MOSMETRO": [
+                "dist/node/schemas/mosmetro.d.ts"
+            ],
+            "schemas/YANDEX_MONEY": [
+                "dist/node/schemas/yandex_money.d.ts"
+            ]
+        }
     },
     "exports": {
         "./translate": "./dist/node/translate/index.js",
