@@ -21,9 +21,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    # - run: npm ci
-    # TODO: decide about the lockfile, then turn it to "npm ci" or "yarn"
-    - run: npm i
+    - run: npm ci
     - run: npm run build
     - run: npm test
     - run: npm run coveralls
