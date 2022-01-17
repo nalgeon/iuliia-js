@@ -56,7 +56,6 @@
         "clean": "rm -rf dist",
         "compile:node": "tsc",
         "compile:browser": "tsc -p tsconfig.browser.json",
-        "coveralls": "cat ./coverage/lcov.info | coveralls",
         "format": "prettier --write \"src/**/*.ts\"",
         "lint": "tslint -p tsconfig.json",
         "test": "jest --coverage --config jestconfig.json",
