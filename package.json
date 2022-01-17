@@ -1,68 +1,70 @@
 {
-    "name": "iuliia",
-    "version": "0.7.0",
-    "description": "Transliterate Cyrillic → Latin in every possible way",
-    "author": "Anton Zhiyanov <m@antonz.ru>",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/nalgeon/iuliia-js.git"
-    },
-    "keywords": [
-        "transliterate",
-        "transliteration",
-        "romanization",
-        "cyrillic to latin",
-        "iso 9",
-        "icao doc 9303"
-    ],
-    "devDependencies": {
-        "@types/jest": "^25.2.1",
-        "@typescript-eslint/eslint-plugin": "^5.9.1",
-        "@typescript-eslint/parser": "^5.9.1",
-        "coveralls": "^3.0.14",
-        "eslint": "^8.7.0",
-        "jest": "^25.4.0",
-        "prettier": "^2.0.5",
-        "rollup": "^2.7.2",
-        "terser": "^4.6.12",
-        "ts-jest": "^25.4.0",
-        "typescript": "^4.5.4"
-    },
-    "main": "dist/node/index.js",
-    "types": "dist/node/index.d.ts",
-    "typesVersions": {
-        "*": {
-            "translate": [
-                "dist/node/translate/index.d.ts"
-            ],
-            "schemas/MOSMETRO": [
-                "dist/node/schemas/mosmetro.d.ts"
-            ],
-            "schemas/YANDEX_MONEY": [
-                "dist/node/schemas/yandex_money.d.ts"
-            ]
-        }
-    },
-    "exports": {
-        "./translate": "./dist/node/translate/index.js",
-        "./schemas/MOSMETRO": "./dist/node/schemas/mosmetro.js",
-        "./schemas/YANDEX_MONEY": "./dist/node/schemas/yandex_money.js",
-        "./package.json": "./package.json"
-    },
-    "files": [
-        "dist/**/*"
-    ],
-    "scripts": {
-        "clean": "rm -rf dist",
-        "compile:node": "tsc",
-        "compile:browser": "tsc -p tsconfig.browser.json",
-        "format": "prettier --write \"src/**/*.ts\"",
-        "lint": "eslint ./src",
-        "test": "jest --coverage --config jestconfig.json",
-        "build": "npm run clean && npm run compile:node && npm run compile:browser && npm run bundle:umd && npm run bundle:umd:min && npm run build:stats",
-        "build:stats": "cd dist/umd && ls -lh *.js | awk '{print $5,$9}'",
-        "bundle:umd": "rollup dist/browser/index.js --file dist/umd/iuliia.js --format umd --name iuliia",
-        "bundle:umd:min": "terser --ecma 6 --compress --mangle -o dist/umd/iuliia.min.js -- dist/umd/iuliia.js"
+  "name": "iuliia",
+  "version": "0.7.0",
+  "description": "Transliterate Cyrillic → Latin in every possible way",
+  "author": "Anton Zhiyanov <m@antonz.ru>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nalgeon/iuliia-js.git"
+  },
+  "keywords": [
+    "transliterate",
+    "transliteration",
+    "romanization",
+    "cyrillic to latin",
+    "iso 9",
+    "icao doc 9303"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "coveralls": "^3.0.14",
+    "eslint": "^8.7.0",
+    "jest": "^27.4.7",
+    "prettier": "^2.0.5",
+    "rollup": "^2.7.2",
+    "terser": "^4.6.12",
+    "typescript": "^4.5.4"
+  },
+  "main": "dist/node/index.js",
+  "types": "dist/node/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "translate": [
+        "dist/node/translate/index.d.ts"
+      ],
+      "schemas/MOSMETRO": [
+        "dist/node/schemas/mosmetro.d.ts"
+      ],
+      "schemas/YANDEX_MONEY": [
+        "dist/node/schemas/yandex_money.d.ts"
+      ]
     }
+  },
+  "exports": {
+    "./translate": "./dist/node/translate/index.js",
+    "./schemas/MOSMETRO": "./dist/node/schemas/mosmetro.js",
+    "./schemas/YANDEX_MONEY": "./dist/node/schemas/yandex_money.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "compile:node": "tsc",
+    "compile:browser": "tsc -p tsconfig.browser.json",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint .",
+    "test": "jest",
+    "build": "npm run clean && npm run compile:node && npm run compile:browser && npm run bundle:umd && npm run bundle:umd:min && npm run build:stats",
+    "build:stats": "cd dist/umd && ls -lh *.js | awk '{print $5,$9}'",
+    "bundle:umd": "rollup dist/browser/index.js --file dist/umd/iuliia.js --format umd --name iuliia",
+    "bundle:umd:min": "terser --ecma 6 --compress --mangle -o dist/umd/iuliia.min.js -- dist/umd/iuliia.js"
+  }
 }
