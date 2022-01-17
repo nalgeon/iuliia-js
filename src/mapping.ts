@@ -39,7 +39,7 @@ export class Mapping {
     /**
      * Return mapped value for `key` if key is in the map, else `defaultValue`.
      */
-    public get(key: string, defaultValue?: any): any {
+    public get(key: string, defaultValue?: string): string | undefined {
         const value = this.map.get(key);
         return value !== undefined ? value : defaultValue;
     }
