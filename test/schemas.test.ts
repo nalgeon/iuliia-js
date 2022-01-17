@@ -59,9 +59,9 @@ test("translate", () => {
 
 function samples(): Array<[string, number, string, string]> {
     const samples: Array<[string, number, string, string]> = [];
-    for (let schema of iuliia.Schemas.values()) {
+    for (const schema of iuliia.Schemas.values()) {
         let idx = 1;
-        for (let sample of schema.samples) {
+        for (const sample of schema.samples) {
             const source = sample[0];
             const expected = sample[1];
             samples.push([schema.name, idx++, source, expected]);
