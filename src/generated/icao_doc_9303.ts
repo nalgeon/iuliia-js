@@ -1,7 +1,7 @@
 export default {
     name: "icao_doc_9303",
     description: "ICAO DOC 9303 transliteration schema",
-    url: "https://dangry.ru/iuliia/icao-doc-9303/",
+    url: "https://iuliia.ru/icao-doc-9303/",
     mapping: {
         а: "a",
         б: "b",

@@ -1,7 +1,7 @@
 export default {
     name: "telegram",
     description: "Telegram transliteration schema",
-    url: "https://dangry.ru/iuliia/telegram/",
+    url: "https://iuliia.ru/telegram/",
     mapping: {
         а: "a",
         б: "b",

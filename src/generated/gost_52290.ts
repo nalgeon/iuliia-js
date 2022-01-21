@@ -1,7 +1,7 @@
 export default {
     name: "gost_52290",
     description: "GOST R 52290-2004 transliteration schema",
-    url: "https://dangry.ru/iuliia/gost-52290/",
+    url: "https://iuliia.ru/gost-52290/",
     mapping: {
         а: "a",
         б: "b",

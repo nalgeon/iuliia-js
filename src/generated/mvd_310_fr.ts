@@ -1,7 +1,7 @@
 export default {
     name: "mvd_310_fr",
     description: "MVD 310-1997 transliteration schema",
-    url: "https://dangry.ru/iuliia/mvd-310/",
+    url: "https://iuliia.ru/mvd-310/",
     comments: [
         "This schema defines the following rule for the French mapping:",
         "> `С` between two vowels → `SS`",
@@ -50,8 +50,12 @@ export default {
         ье: "ie",
         кс: "x",
     },
-    next_mapping: { кс: "" },
-    ending_mapping: { ин: "ine" },
+    next_mapping: {
+        кс: "",
+    },
+    ending_mapping: {
+        ин: "ine",
+    },
     samples: [
         [
             "Юлия, съешь ещё этих мягких французских булок из Йошкар-Олы, да выпей алтайского чаю",

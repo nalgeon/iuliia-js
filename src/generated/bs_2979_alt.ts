@@ -1,7 +1,7 @@
 export default {
     name: "bs_2979_alt",
     description: "British Standard 2979:1958 transliteration schema",
-    url: "https://dangry.ru/iuliia/bs-2979/",
+    url: "https://iuliia.ru/bs-2979/",
     mapping: {
         а: "a",
         б: "b",
@@ -39,7 +39,10 @@ export default {
     },
     prev_mapping: null,
     next_mapping: null,
-    ending_mapping: { ий: "y", ый: "y" },
+    ending_mapping: {
+        ий: "y",
+        ый: "y",
+    },
     samples: [
         [
             "Юлия, съешь ещё этих мягких французских булок из Йошкар-Олы, да выпей алтайского чаю",

@@ -1,7 +1,7 @@
 export default {
     name: "wikipedia",
     description: "Wikipedia transliteration schema",
-    url: "https://dangry.ru/iuliia/wikipedia/",
+    url: "https://iuliia.ru/wikipedia/",
     mapping: {
         а: "a",
         б: "b",

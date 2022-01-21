@@ -1,7 +1,7 @@
 export default {
     name: "ala_lc_alt",
     description: "ALA-LC transliteration schema.",
-    url: "https://dangry.ru/iuliia/ala-lc/",
+    url: "https://iuliia.ru/ala-lc/",
     mapping: {
         а: "a",
         б: "b",

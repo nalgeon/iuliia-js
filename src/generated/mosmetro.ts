@@ -1,7 +1,7 @@
 export default {
     name: "mosmetro",
     description: "Moscow Metro map transliteration schema",
-    url: "https://dangry.ru/iuliia/metro-map/",
+    url: "https://iuliia.ru/mosmetro/",
     mapping: {
         а: "a",
         б: "b",

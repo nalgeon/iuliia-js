@@ -1,7 +1,7 @@
 export default {
     name: "bgn_pcgn",
     description: "BGN/PCGN transliteration schema",
-    url: "https://dangry.ru/iuliia/bgn-pcgn/",
+    url: "https://iuliia.ru/bgn-pcgn/",
     mapping: {
         а: "a",
         б: "b",

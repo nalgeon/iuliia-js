@@ -1,7 +1,7 @@
 export default {
     name: "gost_7034",
     description: "GOST R 7.0.34-2014 transliteration schema",
-    url: "http://localhost:3000/iuliia/gost-7034/",
+    url: "https://iuliia.ru/gost-7034/",
     comments: [
         "This schema defines alternatives for many letters, but does not specify when to use which:",
         "  е → e  (ye)",
