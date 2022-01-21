@@ -37,14 +37,8 @@ export default {
         ю: "yu",
         я: "ya",
     },
-    prev_mapping: {
-        ье: "ye",
-        ъе: "ye",
-    },
-    next_mapping: {
-        ье: "",
-        ъе: "",
-    },
+    prev_mapping: { ье: "ye", ъе: "ye" },
+    next_mapping: { ье: "", ъе: "" },
     ending_mapping: null,
     samples: [
         [

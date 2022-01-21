@@ -45,10 +45,7 @@ export default {
     },
     prev_mapping: null,
     next_mapping: null,
-    ending_mapping: {
-        ий: "y",
-        ый: "y",
-    },
+    ending_mapping: { ий: "y", ый: "y" },
     samples: [
         [
             "Юлия, съешь ещё этих мягких французских булок из Йошкар-Олы, да выпей алтайского чаю",

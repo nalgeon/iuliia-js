@@ -37,22 +37,9 @@ export default {
         ю: "yu",
         я: "ya",
     },
-    prev_mapping: {
-        е: "ye",
-        ае: "ye",
-        ие: "ye",
-        ое: "ye",
-        уе: "ye",
-        эе: "ye",
-        юе: "ye",
-        яе: "ye",
-    },
-    next_mapping: {
-        ъе: "y",
-    },
-    ending_mapping: {
-        ый: "iy",
-    },
+    prev_mapping: { е: "ye", ае: "ye", ие: "ye", ое: "ye", уе: "ye", эе: "ye", юе: "ye", яе: "ye" },
+    next_mapping: { ъе: "y" },
+    ending_mapping: { ый: "iy" },
     samples: [
         [
             "Юлия, съешь ещё этих мягких французских булок из Йошкар-Олы, да выпей алтайского чаю",

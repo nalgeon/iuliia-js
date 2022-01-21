@@ -71,12 +71,7 @@ export default {
         шё: "e",
         щё: "e",
     },
-    next_mapping: {
-        ъе: "",
-        ье: "",
-        ъё: "",
-        ьё: "",
-    },
+    next_mapping: { ъе: "", ье: "", ъё: "", ьё: "" },
     ending_mapping: null,
     samples: [
         [

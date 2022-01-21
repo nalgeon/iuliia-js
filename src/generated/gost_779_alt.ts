@@ -38,12 +38,7 @@ export default {
         я: "ya",
     },
     prev_mapping: null,
-    next_mapping: {
-        це: "c",
-        ци: "c",
-        цй: "c",
-        цы: "c",
-    },
+    next_mapping: { це: "c", ци: "c", цй: "c", цы: "c" },
     ending_mapping: null,
     samples: [
         [

@@ -43,19 +43,9 @@ export default {
         ю: "iou",
         я: "ia",
     },
-    prev_mapping: {
-        ге: "ue",
-        ги: "ui",
-        гы: "uy",
-        ье: "ie",
-        кс: "x",
-    },
-    next_mapping: {
-        кс: "",
-    },
-    ending_mapping: {
-        ин: "ine",
-    },
+    prev_mapping: { ге: "ue", ги: "ui", гы: "uy", ье: "ie", кс: "x" },
+    next_mapping: { кс: "" },
+    ending_mapping: { ин: "ine" },
     samples: [
         [
             "Юлия, съешь ещё этих мягких французских булок из Йошкар-Олы, да выпей алтайского чаю",

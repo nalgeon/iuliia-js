@@ -37,11 +37,7 @@ export default {
         ю: "yu",
         я: "ya",
     },
-    prev_mapping: {
-        тц: "s",
-        ьё: "o",
-        ъё: "o",
-    },
+    prev_mapping: { тц: "s", ьё: "o", ъё: "o" },
     next_mapping: {
         ьа: "y",
         ье: "y",
@@ -58,10 +54,7 @@ export default {
         ъу: "y",
         ъэ: "y",
     },
-    ending_mapping: {
-        ий: "y",
-        ый: "y",
-    },
+    ending_mapping: { ий: "y", ый: "y" },
     samples: [
         [
             "Юлия, съешь ещё этих мягких французских булок из Йошкар-Олы, да выпей алтайского чаю",

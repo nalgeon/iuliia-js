@@ -27,7 +27,7 @@ async function jsonToTS(inputFile: string, v: ValidateFunction): Promise<string>
         console.error(v.errors);
         process.exit(1);
     }
-    return `export default ${JSON.stringify(data, null, 2)};`;
+    return `export default ${JSON.stringify(data)};`;
 }
 
 function createDefinitions(moduleNames: string[]): string {
