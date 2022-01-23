@@ -1,6 +1,7 @@
 /**
  * Transliteration schema base features.
  */
+import { TransliterationSchema } from "./generated/TransliterationSchema";
 import { LetterMapping, PrevMapping, NextMapping, EndingMapping } from "./mapping";
 
 /** Transliteration schema. Defines the way to translate individual letters. */
@@ -52,7 +53,7 @@ export class Schema {
         return this.endingMap.get(ending);
     }
 
-    public static load(definition: any) {
+    public static load(definition: TransliterationSchema) {
         return new Schema(
             definition.name,
             new Map<string, string>(Object.entries(definition.mapping)),
