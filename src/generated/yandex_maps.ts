@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "yandex_maps",
     description: "Yandex.Maps transliteration schema",
@@ -58,4 +60,4 @@ export default {
         ["Бабаево", "Babayevo"],
         ["Белово", "Belovo"],
     ],
-};
+} as TransliterationSchema;

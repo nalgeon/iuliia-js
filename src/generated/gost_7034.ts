@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "gost_7034",
     description: "GOST R 7.0.34-2014 transliteration schema",
@@ -59,4 +61,4 @@ export default {
             "Yuliya, s''esh' eshhyo etix myagkix francuzskix bulok iz Joshkar-Oly, da vypej altajskogo chayu",
         ],
     ],
-};
+} as TransliterationSchema;

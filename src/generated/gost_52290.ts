@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "gost_52290",
     description: "GOST R 52290-2004 transliteration schema",
@@ -84,4 +86,4 @@ export default {
         ],
         ["Ё Крё Мякоё", "Yo Krye Myakoyo"],
     ],
-};
+} as TransliterationSchema;

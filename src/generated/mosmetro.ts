@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "mosmetro",
     description: "Moscow Metro map transliteration schema",
@@ -92,4 +94,4 @@ export default {
         ["Электрозаводская", "Elektrozavodskaya"],
         ["Юго-Западная", "Yugo-Zapadnaya"],
     ],
-};
+} as TransliterationSchema;

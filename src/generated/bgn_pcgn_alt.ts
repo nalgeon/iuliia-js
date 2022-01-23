@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "bgn_pcgn_alt",
     description: "BGN/PCGN transliteration schema",
@@ -103,4 +105,4 @@ export default {
         ["Вяртсиля", "Vyartsilya"],
         ["Ташчишма", "Tashchishma"],
     ],
-};
+} as TransliterationSchema;

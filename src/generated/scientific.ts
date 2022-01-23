@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "scientific",
     description: "Scientific transliteration schema",
@@ -46,4 +48,4 @@ export default {
             "Julija, sʺešʹ eščё ètix mjagkix francuzskix bulok iz Joškar-Oly, da vypej altajskogo čaju",
         ],
     ],
-};
+} as TransliterationSchema;

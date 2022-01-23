@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "ungegn_1987",
     description: "UNGEGN 1987 V/18 transliteration schema",
@@ -50,4 +52,4 @@ export default {
             "Rossija, gorod Joškar-Ola, ulica Jana Krastynja",
         ],
     ],
-};
+} as TransliterationSchema;

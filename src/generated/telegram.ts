@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "telegram",
     description: "Telegram transliteration schema",
@@ -46,4 +48,4 @@ export default {
             "Iuliia, sesh esce etih miagkih francuzskih bulok iz Ioshkar-Oly, da vypei altaiskogo chaiu",
         ],
     ],
-};
+} as TransliterationSchema;

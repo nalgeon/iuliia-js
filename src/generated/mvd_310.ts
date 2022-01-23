@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "mvd_310",
     description: "MVD 310-1997 transliteration schema",
@@ -49,4 +51,4 @@ export default {
         ["Гайа Васильева", "Gaya Vasilyeva"],
         ["Андрей Видный", "Andrey Vidnyy"],
     ],
-};
+} as TransliterationSchema;

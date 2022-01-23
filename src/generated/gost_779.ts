@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "gost_779",
     aliases: ["iso_9_1995"],
@@ -47,4 +49,4 @@ export default {
             "Ûliâ, sʺešʹ eŝё ètih mâgkih francuzskih bulok iz Joškar-Oly, da vypej altajskogo čaû",
         ],
     ],
-};
+} as TransliterationSchema;
