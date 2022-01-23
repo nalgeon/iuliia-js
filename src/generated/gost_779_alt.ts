@@ -1,7 +1,7 @@
 export default {
     name: "gost_779_alt",
     description: "GOST 7.79-2000 (aka ISO 9:1995) transliteration schema",
-    url: "https://dangry.ru/iuliia/gost-779/",
+    url: "https://iuliia.ru/gost-779/",
     mapping: {
         а: "a",
         б: "b",
@@ -33,22 +33,17 @@ export default {
         ъ: "``",
         ы: "y`",
         ь: "`",
-        э: "е`",
+        э: "e`",
         ю: "yu",
         я: "ya",
     },
     prev_mapping: null,
-    next_mapping: {
-        це: "c",
-        ци: "c",
-        цй: "c",
-        цы: "c",
-    },
+    next_mapping: { це: "c", ци: "c", цй: "c", цы: "c" },
     ending_mapping: null,
     samples: [
         [
             "Юлия, съешь ещё этих мягких французских булок из Йошкар-Олы, да выпей алтайского чаю",
-            "Yuliya, s``esh` eshhyo е`tix myagkix franczuzskix bulok iz Joshkar-Oly`, da vy`pej altajskogo chayu",
+            "Yuliya, s``esh` eshhyo e`tix myagkix franczuzskix bulok iz Joshkar-Oly`, da vy`pej altajskogo chayu",
         ],
     ],
 };

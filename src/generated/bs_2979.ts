@@ -1,7 +1,7 @@
 export default {
     name: "bs_2979",
     description: "British Standard 2979:1958 transliteration schema",
-    url: "https://dangry.ru/iuliia/bs-2979/",
+    url: "https://iuliia.ru/bs-2979/",
     comments: [
         "This schema defines two alternative translations for `Ы`:",
         "  - `Ы` → `Ȳ` (used by the Oxford University Press)",

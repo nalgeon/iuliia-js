@@ -1,7 +1,7 @@
 export default {
     name: "scientific",
     description: "Scientific transliteration schema",
-    url: "https://dangry.ru/iuliia/scientific/",
+    url: "https://iuliia.ru/scientific/",
     mapping: {
         а: "a",
         б: "b",

@@ -1,7 +1,7 @@
 export default {
     name: "mvd_782",
     description: "MVD 782-2000 transliteration schema",
-    url: "https://dangry.ru/iuliia/mvd-782/",
+    url: "https://iuliia.ru/mvd-782/",
     mapping: {
         а: "a",
         б: "b",
@@ -72,13 +72,7 @@ export default {
         щё: "e",
         ьи: "yi",
     },
-    next_mapping: {
-        ъе: "",
-        ье: "",
-        ъё: "",
-        ьё: "",
-        ьи: "",
-    },
+    next_mapping: { ъе: "", ье: "", ъё: "", ьё: "", ьи: "" },
     ending_mapping: null,
     samples: [
         [

@@ -1,7 +1,7 @@
 export default {
     name: "mvd_310",
     description: "MVD 310-1997 transliteration schema",
-    url: "https://dangry.ru/iuliia/mvd-310/",
+    url: "https://iuliia.ru/mvd-310/",
     mapping: {
         а: "a",
         б: "b",

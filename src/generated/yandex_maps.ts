@@ -1,7 +1,7 @@
 export default {
     name: "yandex_maps",
     description: "Yandex.Maps transliteration schema",
-    url: "https://dangry.ru/iuliia/yandex-maps/",
+    url: "https://iuliia.ru/yandex-maps/",
     mapping: {
         а: "a",
         б: "b",
@@ -37,13 +37,13 @@ export default {
         ю: "yu",
         я: "ya",
     },
-    prev_mapping: null,
+    prev_mapping: { е: "ye", ае: "ye", ие: "ye", ое: "ye", уе: "ye", эе: "ye", юе: "ye", яе: "ye" },
     next_mapping: { ъе: "y" },
     ending_mapping: { ый: "iy" },
     samples: [
         [
             "Юлия, съешь ещё этих мягких французских булок из Йошкар-Олы, да выпей алтайского чаю",
-            "Yuliya, syesh eschyo etikh myagkikh frantsuzskikh bulok iz Yoshkar-Oly, da vypey altayskogo chayu",
+            "Yuliya, syesh yeschyo etikh myagkikh frantsuzskikh bulok iz Yoshkar-Oly, da vypey altayskogo chayu",
         ],
         [
             "Россия, город Йошкар-Ола, улица Яна Крастыня",
@@ -54,5 +54,8 @@ export default {
         ["Астрахань, ул Подъяпольского", "Astrakhan, ul Podyapolskogo"],
         ["Щегловитовка", "Scheglovitovka"],
         ["Новый Уренгой", "Noviy Urengoy"],
+        ["Елабуга", "Yelabuga"],
+        ["Бабаево", "Babayevo"],
+        ["Белово", "Belovo"],
     ],
 };

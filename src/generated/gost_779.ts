@@ -2,7 +2,7 @@ export default {
     name: "gost_779",
     aliases: ["iso_9_1995"],
     description: "GOST 7.79-2000 (aka ISO 9:1995) transliteration schema",
-    url: "https://dangry.ru/iuliia/gost-779/",
+    url: "https://iuliia.ru/gost-779/",
     mapping: {
         а: "a",
         б: "b",

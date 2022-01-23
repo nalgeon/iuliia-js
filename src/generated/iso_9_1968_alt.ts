@@ -1,7 +1,7 @@
 export default {
     name: "iso_9_1968_alt",
     description: "ISO/R 9:1968 transliteration schema",
-    url: "https://dangry.ru/iuliia/iso-9-1968/",
+    url: "https://iuliia.ru/iso-9-1968/",
     mapping: {
         а: "a",
         б: "b",

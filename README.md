@@ -103,9 +103,41 @@ yandex_money    iuliia.YANDEX_MONEY
 
 ## Development setup
 
+Install dependencies:
+
 ```sh
-$ npm install
-$ npm run format && npm run lint && npm test && npm run build
+npm ci
+```
+
+Generate schemas from the [schemas repository](https://github.com/nalgeon/iuliia):
+
+```sh
+npm run generate
+```
+
+Format the source code:
+
+```sh
+npm run format
+```
+
+Run ESLint checks:
+
+
+```sh
+npm run lint
+```
+
+Run unit tests:
+
+```sh
+npm test
+```
+
+Build JS:
+
+```sh
+npm run build
 ```
 
 ## Contributing

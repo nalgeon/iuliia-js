@@ -1,7 +1,7 @@
 export default {
     name: "wikipedia",
     description: "Wikipedia transliteration schema",
-    url: "https://dangry.ru/iuliia/wikipedia/",
+    url: "https://iuliia.ru/wikipedia/",
     mapping: {
         а: "a",
         б: "b",
@@ -63,10 +63,7 @@ export default {
         ьы: "y",
         ьэ: "y",
     },
-    ending_mapping: {
-        ий: "y",
-        ый: "y",
-    },
+    ending_mapping: { ий: "y", ый: "y" },
     samples: [
         [
             "Юлия, съешь ещё этих мягких французских булок из Йошкар-Олы, да выпей алтайского чаю",

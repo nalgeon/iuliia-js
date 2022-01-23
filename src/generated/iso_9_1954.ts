@@ -1,7 +1,7 @@
 export default {
     name: "iso_9_1954",
     description: "ISO/R 9:1954 transliteration schema",
-    url: "https://dangry.ru/iuliia/iso-9-1954/",
+    url: "https://iuliia.ru/iso-9-1954/",
     mapping: {
         а: "a",
         б: "b",

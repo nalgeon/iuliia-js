@@ -1,7 +1,7 @@
 export default {
     name: "bs_2979_alt",
     description: "British Standard 2979:1958 transliteration schema",
-    url: "https://dangry.ru/iuliia/bs-2979/",
+    url: "https://iuliia.ru/bs-2979/",
     mapping: {
         а: "a",
         б: "b",

@@ -1,7 +1,7 @@
 export default {
     name: "yandex_money",
     description: "Yandex.Money transliteration schema",
-    url: "https://dangry.ru/iuliia/yandex-money/",
+    url: "https://iuliia.ru/yandex-money/",
     mapping: {
         а: "a",
         б: "b",

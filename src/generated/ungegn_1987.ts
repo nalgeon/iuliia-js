@@ -1,7 +1,7 @@
 export default {
     name: "ungegn_1987",
     description: "UNGEGN 1987 V/18 transliteration schema",
-    url: "https://dangry.ru/iuliia/ungegn-1987/",
+    url: "https://iuliia.ru/ungegn-1987/",
     mapping: {
         а: "a",
         б: "b",

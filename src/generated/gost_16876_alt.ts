@@ -1,7 +1,7 @@
 export default {
     name: "gost_16876_alt",
     description: "GOST 16876-71 (aka GOST 1983) transliteration schema",
-    url: "https://dangry.ru/iuliia/gost-16876/",
+    url: "https://iuliia.ru/gost-16876/",
     mapping: {
         а: "a",
         б: "b",
