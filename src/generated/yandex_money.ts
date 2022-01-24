@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "yandex_money",
     description: "Yandex.Money transliteration schema",
@@ -49,4 +51,4 @@ export default {
         ["Иван Брызгальский", "Ivan Bryzgalskii"],
         ["Ксения Стрый", "Kseniya Stryi"],
     ],
-};
+} as TransliterationSchema;

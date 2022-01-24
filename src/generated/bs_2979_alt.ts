@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "bs_2979_alt",
     description: "British Standard 2979:1958 transliteration schema",
@@ -46,4 +48,4 @@ export default {
             "Yuliya, s\"esh' eshche etikh myagkikh frantsuzskikh bulok iz Ioshkar-Oly, da vypei altaiskogo chayu",
         ],
     ],
-};
+} as TransliterationSchema;

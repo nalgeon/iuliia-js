@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "iso_9_1954",
     description: "ISO/R 9:1954 transliteration schema",
@@ -46,4 +48,4 @@ export default {
             'Julija, s"ešʹ eščë ėtih mjagkih francuzskih bulok iz Joškar-Oly, da vypej altajskogo čaju',
         ],
     ],
-};
+} as TransliterationSchema;

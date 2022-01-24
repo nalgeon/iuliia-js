@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "icao_doc_9303",
     description: "ICAO DOC 9303 transliteration schema",
@@ -54,4 +56,4 @@ export default {
         ["Игорь Ильин", "Igor Ilin"],
         ["Ян Разъездной", "Ian Razieezdnoi"],
     ],
-};
+} as TransliterationSchema;

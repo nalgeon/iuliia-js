@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "wikipedia",
     description: "Wikipedia transliteration schema",
@@ -89,4 +91,4 @@ export default {
         ["Великий", "Veliky"],
         ["Набережные Челны", "Naberezhnye Chelny"],
     ],
-};
+} as TransliterationSchema;

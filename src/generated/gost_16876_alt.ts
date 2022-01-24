@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "gost_16876_alt",
     description: "GOST 16876-71 (aka GOST 1983) transliteration schema",
@@ -46,4 +48,4 @@ export default {
             "Julija, s\"esh' eshhjo ehtikh mjagkikh francuzskikh bulok iz Jjoshkar-Oly, da vypejj altajjskogo chaju",
         ],
     ],
-};
+} as TransliterationSchema;

@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "iso_9_1968_alt",
     description: "ISO/R 9:1968 transliteration schema",
@@ -46,4 +48,4 @@ export default {
             "Yulyya, sʺeshʹ eshchë ėtykh myagkykh frantsuzskykh bulok yz Ĭoshkar-Oly, da vypeĭ altaĭskogo chayu",
         ],
     ],
-};
+} as TransliterationSchema;

@@ -28,6 +28,7 @@
         "eslint": "^8.7.0",
         "execa": "^5.1.1",
         "jest": "^27.4.7",
+        "json-schema-to-typescript": "^10.1.5",
         "prettier": "^2.0.5",
         "rollup": "^2.7.2",
         "terser": "^4.6.12",

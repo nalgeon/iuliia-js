@@ -1,12 +1,15 @@
-import execa from "execa";
-import { readdir, access, readFile, writeFile } from "fs/promises";
-import { join, resolve, basename } from "path";
 import Ajv, { ValidateFunction } from "ajv";
+import execa from "execa";
+import { access, readdir, readFile, writeFile } from "fs/promises";
+import { compileFromFile } from "json-schema-to-typescript";
+import { basename, join, resolve } from "path";
 
 const INPUT_DIR = resolve(join(__dirname, "..", ".data"));
 const OUTPUT_DIR = resolve(join(__dirname, "..", "src/generated"));
 const SOURCE_REPO = "https://github.com/nalgeon/iuliia";
 const DEFINITIONS_FILE = join(OUTPUT_DIR, "_definitions.ts");
+const TRANSLITERATION_SCHEMA_FILE = join(OUTPUT_DIR, "TransliterationSchema.ts");
+const JSON_SCHEMA_FILE = join(INPUT_DIR, "schema.jsd");
 
 async function clone() {
     try {
@@ -27,7 +30,10 @@ async function jsonToTS(inputFile: string, v: ValidateFunction): Promise<string>
         console.error(v.errors);
         process.exit(1);
     }
-    return `export default ${JSON.stringify(data)};`;
+    return (
+        "import {TransliterationSchema} from './TransliterationSchema';\n\n" +
+        `export default ${JSON.stringify(data)} as TransliterationSchema;`
+    );
 }
 
 function createDefinitions(moduleNames: string[]): string {
@@ -38,7 +44,7 @@ function createDefinitions(moduleNames: string[]): string {
 
 async function createValidator() {
     const ajv = new Ajv();
-    return ajv.compile(JSON.parse(await readFile(join(INPUT_DIR, "schema.jsd"), "utf8")));
+    return ajv.compile(JSON.parse(await readFile(JSON_SCHEMA_FILE, "utf8")));
 }
 
 async function generate() {
@@ -59,7 +65,14 @@ async function generate() {
     await writeFile(DEFINITIONS_FILE, definitions, "utf8");
 }
 
+async function generateSchemaDefinitionInterface() {
+    console.log(`Writing file: ${TRANSLITERATION_SCHEMA_FILE}`);
+    const schemaDefinitionInterfaceSource = await compileFromFile(JSON_SCHEMA_FILE);
+    await writeFile(TRANSLITERATION_SCHEMA_FILE, schemaDefinitionInterfaceSource, "utf8");
+}
+
 (async () => {
     await clone();
     await generate();
+    await generateSchemaDefinitionInterface();
 })();

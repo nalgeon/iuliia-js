@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "gost_779_alt",
     description: "GOST 7.79-2000 (aka ISO 9:1995) transliteration schema",
@@ -46,4 +48,4 @@ export default {
             "Yuliya, s``esh` eshhyo e`tix myagkix franczuzskix bulok iz Joshkar-Oly`, da vy`pej altajskogo chayu",
         ],
     ],
-};
+} as TransliterationSchema;

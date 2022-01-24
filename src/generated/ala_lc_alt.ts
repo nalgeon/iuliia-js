@@ -1,3 +1,5 @@
+import { TransliterationSchema } from "./TransliterationSchema";
+
 export default {
     name: "ala_lc_alt",
     description: "ALA-LC transliteration schema.",
@@ -46,4 +48,4 @@ export default {
             "Iuliia, s\"esh' eshche etikh miagkikh frantsuzskikh bulok iz Ioshkar-Oly, da vypei altaiskogo chaiu",
         ],
     ],
-};
+} as TransliterationSchema;
