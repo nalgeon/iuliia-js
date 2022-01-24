@@ -53,7 +53,7 @@
         "test": "jest",
         "build": "npm run clean && npm run compile:node && npm run compile:browser && npm run bundle:umd && npm run bundle:umd:min && npm run build:stats",
         "build:stats": "cd dist/umd && ls -lh *.js | awk '{print $5,$9}'",
-        "bundle:umd": "webpack --no-optimization-minimize --output-filename=umd/iuliia.js",
-        "bundle:umd:min": "webpack --optimization-minimize --output-filename=umd/iuliia.min.js"
+        "bundle:umd": "webpack --no-optimization-minimize --output-filename=umd/iuliia.js && rm -rf .tmp",
+        "bundle:umd:min": "webpack --optimization-minimize --output-filename=umd/iuliia.min.js && rm -rf .tmp"
     }
 }

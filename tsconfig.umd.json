@@ -13,6 +13,7 @@
         "downlevelIteration": true,
         "declaration": true,
         "strict": true,
+        "outDir": "./.tmp",
         "skipLibCheck": true
     },
     "include": [
