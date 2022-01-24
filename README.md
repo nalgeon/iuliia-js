@@ -13,9 +13,15 @@ Transliteration means representing Cyrillic data (mainly names and geographic lo
 
 `Iuliia` makes transliteration as easy as:
 
+```ts
+import * as iuliia from "iuliia";
+iuliia.translate("Юлия Щеглова", iuliia.WIKIPEDIA);
+'Yuliya Shcheglova'
+```
+
 ```js
-> import iuliia from "iuliia";
-> iuliia.translate("Юлия Щеглова", iuliia.WIKIPEDIA);
+const iuliia = require("iuliia");
+iuliia.translate("Юлия Щеглова", iuliia.WIKIPEDIA);
 'Yuliya Shcheglova'
 ```
 
