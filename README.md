@@ -13,9 +13,17 @@ Transliteration means representing Cyrillic data (mainly names and geographic lo
 
 `Iuliia` makes transliteration as easy as:
 
+```ts
+// Typescript, ES6
+import * as iuliia from "iuliia";
+iuliia.translate("Юлия Щеглова", iuliia.WIKIPEDIA);
+'Yuliya Shcheglova'
+```
+
 ```js
-> import iuliia from "iuliia";
-> iuliia.translate("Юлия Щеглова", iuliia.WIKIPEDIA);
+// CommonJS
+const iuliia = require("iuliia");
+iuliia.translate("Юлия Щеглова", iuliia.WIKIPEDIA);
 'Yuliya Shcheglova'
 ```
 
@@ -25,7 +33,7 @@ Transliteration means representing Cyrillic data (mainly names and geographic lo
 -   Correctly implements not only the base mapping, but all the special rules for letter combinations and word endings.
 -   Simple API and zero third-party dependencies.
 
-For schema details and other information, see <https://dangry.ru/iuliia> (in Russian).
+For schema details and other information, see <https://iuliia.ru/> (in Russian).
 
 [Issues and limitations](https://github.com/nalgeon/iuliia/blob/master/README.md#issues-and-limitations)
 

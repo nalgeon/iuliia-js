@@ -1,7 +1,7 @@
-import iuliia from "../src/index";
+import { Schemas, translate, WIKIPEDIA } from "../src/index";
 
 test("schema names", () => {
-    const names = iuliia.Schemas.names();
+    const names = Schemas.names();
     expect(names).toEqual([
         "ala_lc",
         "ala_lc_alt",
@@ -34,32 +34,31 @@ test("schema names", () => {
 });
 
 test("get schema by name", () => {
-    const schema = iuliia.Schemas.get("wikipedia");
-    expect(schema).toEqual(iuliia.WIKIPEDIA);
+    const schema = Schemas.get("wikipedia");
+    expect(schema).toEqual(WIKIPEDIA);
 });
 
 test("schema not found", () => {
     expect(() => {
-        iuliia.Schemas.get("whatever");
+        Schemas.get("whatever");
     }).toThrowError("No such schema: whatever");
 });
 
 test("translate", () => {
-    const schema = iuliia.Schemas.get("wikipedia");
-    const translated = iuliia.translate("Юлия", schema);
+    const schema = Schemas.get("wikipedia");
+    const translated = translate("Юлия", schema);
     expect(translated).toBe("Yuliya");
 });
 
 test("translate", () => {
-    const schema = iuliia.Schemas.get("wikipedia");
-    const translated = iuliia.translate("Привет, (привет), человечество!", schema);
+    const schema = Schemas.get("wikipedia");
+    const translated = translate("Привет, (привет), человечество!", schema);
     expect(translated).toBe("Privet, (privet), chelovechestvo!");
 });
 
-
 function samples(): Array<[string, number, string, string]> {
     const samples: Array<[string, number, string, string]> = [];
-    for (const schema of iuliia.Schemas.values()) {
+    for (const schema of Schemas.values()) {
         let idx = 1;
         for (const sample of schema.samples) {
             const source = sample[0];
@@ -71,6 +70,6 @@ function samples(): Array<[string, number, string, string]> {
 }
 
 test.each(samples())("%s %d: %s", (name, idx, source, expected) => {
-    const schema = iuliia.Schemas.get(name);
-    expect(iuliia.translate(source, schema)).toBe(expected);
+    const schema = Schemas.get(name);
+    expect(translate(source, schema)).toBe(expected);
 });
