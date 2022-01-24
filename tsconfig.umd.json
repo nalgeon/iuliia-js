@@ -3,15 +3,23 @@
         "target": "es5",
         "module": "CommonJS",
         "moduleResolution": "node",
-        "lib": ["es2015", "es2016", "es2017", "es2020", "dom"],
-        "removeComments": true,
-        "sourceMap": true,
+        "lib": [
+            "es2015",
+            "es2016",
+            "es2017",
+            "es2020",
+            "dom"
+        ],
         "downlevelIteration": true,
         "declaration": true,
         "strict": true,
-        "outDir": "./dist/browser",
         "skipLibCheck": true
     },
-    "include": ["src"],
-    "exclude": ["node_modules", "test"]
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "node_modules",
+        "test"
+    ]
 }
