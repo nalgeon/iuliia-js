@@ -2,35 +2,32 @@ import { translate } from "./engine";
 import { Schema } from "./schema";
 import { Schemas } from "./schemas";
 
-export = {
-    translate,
-    Schema,
-    Schemas,
-    ALA_LC: Schemas.get("ala_lc"),
-    ALA_LC_ALT: Schemas.get("ala_lc_alt"),
-    BGN_PCGN: Schemas.get("bgn_pcgn"),
-    BGN_PCGN_ALT: Schemas.get("bgn_pcgn_alt"),
-    BS_2979: Schemas.get("bs_2979"),
-    BS_2979_ALT: Schemas.get("bs_2979_alt"),
-    GOST_16876: Schemas.get("gost_16876"),
-    GOST_16876_ALT: Schemas.get("gost_16876_alt"),
-    GOST_52290: Schemas.get("gost_52290"),
-    GOST_52535: Schemas.get("gost_52535"),
-    GOST_7034: Schemas.get("gost_7034"),
-    GOST_779: Schemas.get("gost_779"),
-    GOST_779_ALT: Schemas.get("gost_779_alt"),
-    ICAO_DOC_9303: Schemas.get("icao_doc_9303"),
-    ISO_9_1954: Schemas.get("iso_9_1954"),
-    ISO_9_1968: Schemas.get("iso_9_1968"),
-    ISO_9_1968_ALT: Schemas.get("iso_9_1968_alt"),
-    MOSMETRO: Schemas.get("mosmetro"),
-    MVD_310: Schemas.get("mvd_310"),
-    MVD_310_FR: Schemas.get("mvd_310_fr"),
-    MVD_782: Schemas.get("mvd_782"),
-    SCIENTIFIC: Schemas.get("scientific"),
-    TELEGRAM: Schemas.get("telegram"),
-    UNGEGN_1987: Schemas.get("ungegn_1987"),
-    WIKIPEDIA: Schemas.get("wikipedia"),
-    YANDEX_MAPS: Schemas.get("yandex_maps"),
-    YANDEX_MONEY: Schemas.get("yandex_money"),
-};
+export { translate, Schema, Schemas };
+
+export const ALA_LC = Schemas.get("ala_lc");
+export const ALA_LC_ALT = Schemas.get("ala_lc_alt");
+export const BGN_PCGN = Schemas.get("bgn_pcgn");
+export const BGN_PCGN_ALT = Schemas.get("bgn_pcgn_alt");
+export const BS_2979 = Schemas.get("bs_2979");
+export const BS_2979_ALT = Schemas.get("bs_2979_alt");
+export const GOST_16876 = Schemas.get("gost_16876");
+export const GOST_16876_ALT = Schemas.get("gost_16876_alt");
+export const GOST_52290 = Schemas.get("gost_52290");
+export const GOST_52535 = Schemas.get("gost_52535");
+export const GOST_7034 = Schemas.get("gost_7034");
+export const GOST_779 = Schemas.get("gost_779");
+export const GOST_779_ALT = Schemas.get("gost_779_alt");
+export const ICAO_DOC_9303 = Schemas.get("icao_doc_9303");
+export const ISO_9_1954 = Schemas.get("iso_9_1954");
+export const ISO_9_1968 = Schemas.get("iso_9_1968");
+export const ISO_9_1968_ALT = Schemas.get("iso_9_1968_alt");
+export const MOSMETRO = Schemas.get("mosmetro");
+export const MVD_310 = Schemas.get("mvd_310");
+export const MVD_310_FR = Schemas.get("mvd_310_fr");
+export const MVD_782 = Schemas.get("mvd_782");
+export const SCIENTIFIC = Schemas.get("scientific");
+export const TELEGRAM = Schemas.get("telegram");
+export const UNGEGN_1987 = Schemas.get("ungegn_1987");
+export const WIKIPEDIA = Schemas.get("wikipedia");
+export const YANDEX_MAPS = Schemas.get("yandex_maps");
+export const YANDEX_MONEY = Schemas.get("yandex_money");
