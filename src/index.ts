@@ -2,7 +2,7 @@ import { translate } from "./engine";
 import { Schema } from "./schema";
 import { Schemas } from "./schemas";
 
-export default {
+export = {
     translate,
     Schema,
     Schemas,
