@@ -6,9 +6,7 @@ import { basename, join, resolve } from "path";
 
 const INPUT_DIR = resolve(join(__dirname, "..", ".data"));
 const OUTPUT_DIR = resolve(join(__dirname, "..", "src/generated"));
-//TODO: [tmp] replace it with the correct URL
-const SOURCE_REPO = "https://github.com/corporateanon/iuliia";
-// const SOURCE_REPO = "https://github.com/nalgeon/iuliia";
+const SOURCE_REPO = "https://github.com/nalgeon/iuliia";
 const DEFINITIONS_FILE = join(OUTPUT_DIR, "_definitions.ts");
 const TRANSLITERATION_SCHEMA_FILE = join(OUTPUT_DIR, "TransliterationSchema.ts");
 const JSON_SCHEMA_FILE = join(INPUT_DIR, "schema.jsd");
