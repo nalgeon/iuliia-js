@@ -42,16 +42,18 @@
     "files": [
         "dist/**/*"
     ],
+    "sideEffects": false,
     "scripts": {
         "generate": "ts-node --skip-project ./scripts/generate.ts",
         "postgenerate": "npm run format",
         "clean": "rm -rf dist",
         "compile:node": "tsc",
-        "compile:browser": "tsc -p tsconfig.browser.json",
+        "compile:esm": "tsc -p tsconfig.esm.json",
         "format": "prettier --write \"src/**/*.ts\"",
         "lint": "eslint .",
+        "test:treeshake": "npm run build && ( cd examples/tree-shaking-webpack && npm run test)",
         "test": "jest",
-        "build": "npm run clean && npm run compile:node && npm run compile:browser && npm run bundle:umd && npm run bundle:umd:min && npm run build:stats",
+        "build": "npm run clean && npm run compile:node && npm run compile:esm && npm run bundle:umd && npm run bundle:umd:min && npm run build:stats",
         "build:stats": "cd dist/umd && ls -lh *.js | awk '{print $5,$9}'",
         "bundle:umd": "webpack --no-optimization-minimize --output-filename=umd/iuliia.js && rm -rf .tmp",
         "bundle:umd:min": "webpack --optimization-minimize --output-filename=umd/iuliia.min.js && rm -rf .tmp"
