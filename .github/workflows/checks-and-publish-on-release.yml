@@ -65,4 +65,4 @@ jobs:
           node-version: 16
           cache: 'npm'
       - run: npm ci
-      - run: npm test:treeshake
+      - run: npm run test:treeshake
