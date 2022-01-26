@@ -2,12 +2,6 @@
     "name": "iuliia",
     "version": "0.8.1",
     "description": "Transliterate Cyrillic → Latin in every possible way",
-    "author": "Anton Zhiyanov <m@antonz.ru>",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/nalgeon/iuliia-js.git"
-    },
     "keywords": [
         "transliterate",
         "transliteration",
@@ -16,6 +10,36 @@
         "iso 9",
         "icao doc 9303"
     ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nalgeon/iuliia-js.git"
+    },
+    "license": "MIT",
+    "author": "Anton Zhiyanov <m@antonz.ru>",
+    "sideEffects": false,
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "types": "dist/cjs/index.d.ts",
+    "files": [
+        "dist/**/*"
+    ],
+    "scripts": {
+        "prebuild": "npm run clean",
+        "build": "concurrently 'npm:build:*'",
+        "postbuild": "npm run build_stats",
+        "build:esm": "tsc -p tsconfig.esm.json",
+        "build:node": "tsc",
+        "build:umd": "webpack --no-optimization-minimize --output-filename=umd/iuliia.js && rm -rf .tmp",
+        "build:umd:min": "webpack --optimization-minimize --output-filename=umd/iuliia.min.js && rm -rf .tmp",
+        "build_stats": "cd dist/umd && ls -lh *.js | awk '{print $5,$9}'",
+        "clean": "rm -rf dist",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "generate": "ts-node --skip-project ./scripts/generate.ts",
+        "postgenerate": "npm run format",
+        "lint": "eslint .",
+        "test": "jest /test/",
+        "test:integration": "jest /integration-test/"
+    },
     "devDependencies": {
         "@babel/core": "^7.16.7",
         "@babel/preset-env": "^7.16.8",
@@ -25,6 +49,7 @@
         "@typescript-eslint/eslint-plugin": "^5.9.1",
         "@typescript-eslint/parser": "^5.9.1",
         "ajv": "^8.9.0",
+        "concurrently": "^7.0.0",
         "coveralls": "^3.0.14",
         "eslint": "^8.7.0",
         "execa": "^5.1.1",
@@ -36,24 +61,5 @@
         "typescript": "^4.5.4",
         "webpack": "^5.67.0",
         "webpack-cli": "^4.9.1"
-    },
-    "main": "dist/node/index.js",
-    "types": "dist/node/index.d.ts",
-    "files": [
-        "dist/**/*"
-    ],
-    "scripts": {
-        "generate": "ts-node --skip-project ./scripts/generate.ts",
-        "postgenerate": "npm run format",
-        "clean": "rm -rf dist",
-        "compile:node": "tsc",
-        "compile:browser": "tsc -p tsconfig.browser.json",
-        "format": "prettier --write \"src/**/*.ts\"",
-        "lint": "eslint .",
-        "test": "jest",
-        "build": "npm run clean && npm run compile:node && npm run compile:browser && npm run bundle:umd && npm run bundle:umd:min && npm run build:stats",
-        "build:stats": "cd dist/umd && ls -lh *.js | awk '{print $5,$9}'",
-        "bundle:umd": "webpack --no-optimization-minimize --output-filename=umd/iuliia.js && rm -rf .tmp",
-        "bundle:umd:min": "webpack --optimization-minimize --output-filename=umd/iuliia.min.js && rm -rf .tmp"
     }
 }

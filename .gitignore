@@ -1,6 +1,6 @@
 .idea
 node_modules
-/dist
-/coverage
+dist
+coverage
 .data
 .tmp
