@@ -1,6 +1,6 @@
 import { readFile, stat } from "fs/promises";
 import { join } from "path";
-import { createContext, runInContext, runInNewContext, runInThisContext } from "vm";
+import { createContext, runInContext, runInNewContext } from "vm";
 import webpack from "webpack";
 import webpackConfig from "./webpack/webpack.config";
 
