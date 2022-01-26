@@ -1,3 +1,3 @@
-import { MOSMETRO, translate } from "iuliia";
+import { MOSMETRO, translate } from "../../../";
 
 console.log(translate("Привет, мир!", MOSMETRO));

@@ -1,8 +1,11 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require("path");
 
+/**
+ * @type {import("webpack").Configuration}
+ */
 module.exports = {
-    entry: "./src/index.js",
+    entry: path.resolve(__dirname, "src/index.js"),
     mode: "development",
     devtool: "source-map",
     output: {
@@ -10,12 +13,8 @@ module.exports = {
         filename: "bundle.js",
     },
     optimization: {
+        minimize: true,
         innerGraph: true,
         usedExports: true,
-    },
-    resolve: {
-        alias: {
-            iuliia: path.resolve(path.join(__dirname, "../../dist/esm")),
-        },
     },
 };

@@ -7,7 +7,7 @@
         "downlevelIteration": true,
         "declaration": true,
         "strict": true,
-        "outDir": "./dist/node",
+        "outDir": "./dist/cjs",
         "skipLibCheck": true
     },
     "include": ["src"],

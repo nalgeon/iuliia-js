@@ -65,4 +65,5 @@ jobs:
           node-version: 16
           cache: 'npm'
       - run: npm ci
-      - run: npm run test:treeshake
+      - run: npm run build
+      - run: npm run test:integration
