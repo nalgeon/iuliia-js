@@ -4,11 +4,6 @@
 
 > This is the TypeScript port of the Python [iuliia](https://github.com/nalgeon/iuliia-py) package
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][build-image]][build-url]
-[![Code Coverage][coverage-image]][coverage-url]
-[![Code Quality][quality-image]][quality-url]
-
 Transliteration means representing Cyrillic data (mainly names and geographic locations) with Latin letters. It is used for international passports, visas, green cards, driving licenses, mail and goods delivery etc.
 
 `Iuliia` makes transliteration as easy as:
@@ -148,27 +143,6 @@ Build JS:
 npm run build
 ```
 
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Make sure to add or update tests as appropriate.
-
-Use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.4/) for commit messages.
-
-## [Changelog](CHANGELOG.md)
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-<!-- Markdown link & img dfn's -->
-
-[npm-image]: https://img.shields.io/npm/v/iuliia?style=flat-square
-[npm-url]: https://www.npmjs.com/package/iuliia
-[build-image]: https://img.shields.io/travis/nalgeon/iuliia-js?style=flat-square
-[build-url]: https://travis-ci.org/nalgeon/iuliia-js
-[coverage-image]: https://img.shields.io/coveralls/github/nalgeon/iuliia-js?style=flat-square
-[coverage-url]: https://coveralls.io/github/nalgeon/iuliia-js
-[quality-image]: https://img.shields.io/codeclimate/maintainability/nalgeon/iuliia-js?style=flat-square
-[quality-url]: https://codeclimate.com/github/nalgeon/iuliia-js
